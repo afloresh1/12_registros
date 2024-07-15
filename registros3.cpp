@@ -14,6 +14,8 @@ int main(){
 	datos datos_personas[50];
 	int n;
 	int nm;
+	cout<<" "<<endl;
+	cout<<"-------------------------------VERIFICACION DE DATOS ANALIZADOS-----------------------------------"<<endl;
 	cout<<" Ingrese la cantidad de personas: ";
 	cin>>n;
 	for (int i=1; i<=n; i++){
@@ -30,8 +32,10 @@ int main(){
 	do{
 		cout<<"Ingrese un número del 1- 12, estos representaran los meses: ";
 		cin>>nm;
+		cout<<" "<<endl;
 		for(int k=1; k<=n; k++){
 		if(datos_personas[k].mesn==nm){
+			cout<<"EL MES INGRESADO COINCIDE CON EL MES DE NACIMIENTO DE: "<<endl;
 			cout<<k<<" Nombre: "<<datos_personas[k].nombre<<endl;
 			cout<<k<<" Dia de nacimiento : "<<datos_personas[k].dian<<endl;
 			cout<<k<<" Mes de nacimiento : "<<datos_personas[k].mesn<<endl;
