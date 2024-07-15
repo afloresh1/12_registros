@@ -5,11 +5,12 @@ using namespace std;
 struct empleado{
 	string nombre;
 	string sexo;
-	int sueldo;
+	float sueldo;
 };
 int main(){
 	empleado emp[100];
-	int n;
+	int n, nEm=0, k;
+	int s=0, my=0;
 	cout<<"Ingrese el numero de trabajadores: ";
 	cin>>n;
 	for (int i=1; i<=n; i++){
@@ -20,15 +21,34 @@ int main(){
 		cin>>emp[i].sexo;
 		cout<<"Ingrese el sueldo del empleado "<<i<<" : ";
 		cin>>emp[i].sueldo;	
+		
 	}
-	cout<<"DATOS DE LOS EMPLEADO: "<<endl;
+	
+	for (int j=1; j<=n; j++){
+		s = emp[j].sueldo;
+		if (s>my){
+			my = s;
+			k++;
+		}	
+	}
+	cout<<" "<<endl;
+	cout<<"----------DATOS DEL EMPLEADO CON MAYOR SUELDO --------"<<endl;
+	cout<<" "<<endl;
+	cout<<"El mayor sueldo lo tiene el empleado "<<k<<endl;
+	cout<<"Nombre del empleado: "<<emp[k].nombre<<endl;
+	cout<<"Sexo del empleado: "<<emp[k].sexo<<endl;
+	cout<<"Sueldo del empleado: "<<emp[k].sueldo<<endl;
+	cout<<" "<<endl;
+	
+	
+	cout<<"DATOS DE LOS EMPLEADOS: "<<endl;
 	for (int j=1; j<=n; j++){
 		cout<<"Nombre del empleado "<<j<<" : "<<emp[j].nombre<<endl;
 		
 		cout<<"Sexo del empleado "<<j<<" : "<<emp[j].sexo<<endl;
 		
 		cout<<"Sueldo del empleado "<<j<<" : "<<emp[j].sueldo<<endl;
-		
 	}
-	
+
+
 }
