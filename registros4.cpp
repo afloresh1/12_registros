@@ -11,7 +11,7 @@ struct informacion{
 
 int main(){
 	informacion informacion_atletas[80];
-	int n;
+	int n, nEm=0;
 	string paiss;
 	cout<<"Ingrese la cantidad de atletas olimpicos: ";
 	cin>>n;
@@ -27,19 +27,25 @@ int main(){
 	}
 	cout<<"Ingrese el pais que quiera: ";
 	cin>>paiss;
+	int nm;
+	int mnm=0;
 	for(int k=1; k<=n; k++){
 	if(informacion_atletas[k].pais==paiss){
-		cout<<"DATOS DE LA PERSONA QUE COINCIDE DEL PAIS QUE INGRESO"<<endl;
+		cout<<"-----------DATOS DE LA PERSONA QUE COINCIDE DEL PAIS QUE INGRESO-----------"<<endl;
 		cout<<k<<" Nombre: "<<informacion_atletas[k].nombre<<endl;
 		cout<<k<<" Pais de origen : "<<informacion_atletas[k].pais<<endl;
 		cout<<k<<" Disciplina : "<<informacion_atletas[k].disciplina<<endl;
 		cout<<k<<" Numero de medallas : "<<informacion_atletas[k].numeromedallas<<endl;
+		nm= informacion_atletas[k].numeromedallas;
+		if(nm>mnm){
+			mnm=nm;
+			nEm = k;
+		}
+		
 	}
-	else {
-		cout<<"No coincide con ninguno "<<endl;
 	}
-	}
-	
+	cout<<" "<<endl;
+	cout<<"El atleta con mayor numero de medallas del pais de "<<informacion_atletas[nEm].pais<<" es el atleta # "<<nEm<<endl;
 	
 	
 	cout<<" --------------DATOS----------------"<<endl;
