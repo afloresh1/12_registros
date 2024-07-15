@@ -30,6 +30,13 @@ int main (){
 	p = se/n;
 	cout<<"El promedio de la edad de las personas es: "<<p<<endl;
 	cout<<"La cantidad de personas mayores a 50 es: "<<j<<endl;
+	cout<<" "<<endl;
 	
+	cout<<"---------------DATOS DE LAS PERSONAS----------------"<<endl;
+	for (int k=1; k<=n; k++){
+		cout<<"Nombre "<<k<<" : "<<per[k].nombre<<endl;
+		cout<<"DNI "<<k<<" : "<<per[k].dni<<endl;
+		cout<<"Edad "<<k<<": "<<per[k].edad<<endl;
+	}
 	
 }
