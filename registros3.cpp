@@ -26,6 +26,22 @@ int main(){
 		cout<<"Ingrese el año de nacimiento de la persona: ";
 		cin>>datos_personas[i].anion;
 	}
+		
+	do{
+		cout<<"Ingrese un número del 1- 12, estos representaran los meses: ";
+		cin>>nm;
+		for(int k=1; k<=n; k++){
+		if(datos_personas[k].mesn==nm){
+			cout<<k<<" Nombre: "<<datos_personas[k].nombre<<endl;
+			cout<<k<<" Dia de nacimiento : "<<datos_personas[k].dian<<endl;
+			cout<<k<<" Mes de nacimiento : "<<datos_personas[k].mesn<<endl;
+			cout<<k<<" Anio de nacimiento : "<<datos_personas[k].anion<<endl;
+		}
+			
+		}
+		
+	}while(nm!=0);
+	
 	cout<<" --------------DATOS----------------"<<endl;
 	for (int j=1; j<=n; j++){
 		cout<<j<<" Nombre: "<<datos_personas[j].nombre<<endl;
