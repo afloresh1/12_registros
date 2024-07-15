@@ -10,6 +10,8 @@ struct persona{
 int main (){
 	persona per[100];
 	int n;
+	float p, se=0;
+	int j=0, pm=0;
 	cout<<"Cantidad de personas: ";
 	cin>>n;
 	for(int i=1; i<=n; i++){
@@ -19,14 +21,15 @@ int main (){
 		cin>>per[i].dni;
 		cout<<"Ingrese la edad de la persona "<<i<<" : ";
 		cin>>per[i].edad;
+		se = se + per[i].edad;
+		pm = per[i].edad;
+		if (pm>50){
+			j++;
+		}
 	}
-	cout<<" "<<endl;
-	cout<<"------DATOS DE CADA PERSONA------"<<endl;
-	for (int j=1; j<=n; j++){
-	cout<<"Nombre de persona "<<j<<" : "<<per[j].nombre<<endl;
-	cout<<"DNI de persona "<<j<<" : "<<per[j].dni<<endl;
-	cout<<"Edad de persona "<<j<<" : "<<per[j].edad<<endl;
-		
-	}
+	p = se/n;
+	cout<<"El promedio de la edad de las personas es: "<<p<<endl;
+	cout<<"La cantidad de personas mayores a 50 es: "<<j<<endl;
+	
 	
 }
